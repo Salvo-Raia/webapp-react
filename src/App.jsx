@@ -9,8 +9,10 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route index Component={HomePage} />
-        <Route path="/movielist" Component={MovieList} />
-        <Route path="/movielist/:id" Component={MovieDetail} />
+        <Route path="/movies">
+          <Route index Component={MovieList} />
+          <Route path=":id" Component={MovieDetail} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );
