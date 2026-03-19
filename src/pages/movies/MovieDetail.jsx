@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Rating from "../../components/rating";
+import ReviewCard from "../../components/reviews/ReviewCard";
 
 export default function MovieDetail() {
   const { id } = useParams();
@@ -15,7 +16,7 @@ export default function MovieDetail() {
       movie.reviews.forEach((review) => {
         voteSum += review.vote;
       });
-      movie.average_vote = Math.ceil(voteSum / movie.reviews.length);
+      movie.average_vote = Math.floor(voteSum / movie.reviews.length);
       setMovie(movie);
     });
   }
@@ -37,7 +38,7 @@ export default function MovieDetail() {
             </h4>
             <h6 className="text-secondary">{movie.genre}</h6>
             <p>
-              <Rating vote={movie.average_vote} maxVote={5} />
+              <Rating vote={movie.average_vote} maxVote="5" />
             </p>
             <address>
               <b>Directed By:</b> {movie.director}
@@ -53,24 +54,7 @@ export default function MovieDetail() {
       <section className="reviews">
         <h2 className="text-light my-2">Reviews</h2>
         {movie.reviews.map((review, i) => (
-          <div
-            key={review.id}
-            className="review-item border-bottom d-flex align-items-center justify-content-between text-light py-2 my-2 "
-          >
-            <div className="user-infos d-flex align-items-center gap-2 ">
-              <div className="user-avatar">{review.name[0]}</div>
-              <div className="user-name">
-                <strong>{review.name}</strong>
-              </div>
-            </div>
-
-            <div className="user-review d-flex align-items-center gap-4">
-              <div className="user-text">"{review.text}"</div>
-              <div className="user-vote">
-                <Rating vote={review.vote} maxVote={5} />
-              </div>
-            </div>
-          </div>
+          <ReviewCard key={review.id} review={review} />
         ))}
       </section>
     </>
