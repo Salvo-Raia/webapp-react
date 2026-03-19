@@ -16,7 +16,7 @@ export default function MovieList() {
 
   return (
     <>
-      <h1>Movie List</h1>
+      <h1 className="text-light">Movie List</h1>
       <MovieListComponent movies={movies} />
     </>
   );

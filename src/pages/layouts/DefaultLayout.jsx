@@ -36,8 +36,8 @@ export default function DefaulLayout() {
           </div>
         </div>
       </nav>
-      <main>
-        <div className="container my-3">
+      <main className="pb-5">
+        <div className="container">
           <Outlet />
         </div>
       </main>
