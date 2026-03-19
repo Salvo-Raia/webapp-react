@@ -1,5 +1,6 @@
 // Imports
 import { Link } from "react-router-dom";
+import Rating from "./rating";
 
 export default function MovieCard({ movie }) {
   return (
@@ -14,7 +15,9 @@ export default function MovieCard({ movie }) {
         </address>
 
         <p className="my-2">"{movie.abstract}"</p>
-        <p className="card-text">Vote: {movie.average_vote}/5</p>
+        <p className="card-text">
+          <Rating vote={movie.average_vote} maxVote={5} />
+        </p>
         <Link to={"/movies/" + movie.id}>See more</Link>
       </div>
     </div>

@@ -36,15 +36,15 @@ export default function MovieDetail() {
               <span className="h5">{`(${movie.release_year})`}</span>
             </h4>
             <h6 className="text-secondary">{movie.genre}</h6>
+            <p>
+              <Rating vote={movie.average_vote} maxVote={5} />
+            </p>
             <address>
               <b>Directed By:</b> {movie.director}
             </address>
             <p>
               <b>Abstract: </b>
               {movie.abstract}
-            </p>
-            <p>
-              <Rating vote={movie.average_vote} maxVote={5} />
             </p>
           </div>
         </div>
