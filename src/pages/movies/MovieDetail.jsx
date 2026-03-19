@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import Rating from "../../components/rating";
 
 export default function MovieDetail() {
   const { id } = useParams();
@@ -43,8 +44,7 @@ export default function MovieDetail() {
               {movie.abstract}
             </p>
             <p>
-              <b>Vote: </b>
-              {movie.average_vote}
+              <Rating vote={movie.average_vote} maxVote={5} />
             </p>
           </div>
         </div>
@@ -66,7 +66,9 @@ export default function MovieDetail() {
 
             <div className="user-review d-flex align-items-center gap-4">
               <div className="user-text">"{review.text}"</div>
-              <div className="user-vote">{review.vote}/5</div>
+              <div className="user-vote">
+                <Rating vote={review.vote} maxVote={5} />
+              </div>
             </div>
           </div>
         ))}
