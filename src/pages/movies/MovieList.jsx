@@ -1,6 +1,8 @@
 // Imports
 import axios from "axios";
 import { useEffect, useState } from "react";
+import MovieCard from "../../components/MovieCard";
+import MovieListComponent from "../../components/MovieListComponent";
 
 export default function MovieList() {
   const [movies, setMovies] = useState([]);
@@ -12,5 +14,10 @@ export default function MovieList() {
     });
   }
 
-  return <h1>Movie List</h1>;
+  return (
+    <>
+      <h1>Movie List</h1>
+      <MovieListComponent movies={movies} />
+    </>
+  );
 }
