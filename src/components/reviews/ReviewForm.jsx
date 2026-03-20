@@ -11,7 +11,7 @@ const formInitialData = {
 export default function ReviewForm({ movieId, afterFormSubmit }) {
   const [formData, setFormData] = useState(formInitialData);
 
-  const handleFormChange = (e) => {
+  const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -51,10 +51,10 @@ export default function ReviewForm({ movieId, afterFormSubmit }) {
               name="name"
               value={formData.name}
               className="form-control"
-              onChange={handleFormChange}
+              onChange={handleInputChange}
               type="text"
               id="name"
-              autoComplete="given-name"
+              required
             />
           </div>
 
@@ -64,8 +64,9 @@ export default function ReviewForm({ movieId, afterFormSubmit }) {
               name="text"
               value={formData.text}
               className="form-control"
-              onChange={handleFormChange}
+              onChange={handleInputChange}
               id="text"
+              required
             />
           </div>
 
@@ -77,9 +78,10 @@ export default function ReviewForm({ movieId, afterFormSubmit }) {
               min="1"
               max="5"
               className="form-control"
-              onChange={handleFormChange}
+              onChange={handleInputChange}
               type="number"
               id="vote"
+              required
             />
           </div>
           <button className="btn btn-primary my-2">Send review</button>

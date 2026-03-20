@@ -1,5 +1,6 @@
 export default function Rating({ vote, maxVote }) {
   function starRender() {
+    if (!vote) return <i>"Rating not available"</i>;
     const stars = [];
 
     for (let i = 1; i <= maxVote; i++) {

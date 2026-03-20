@@ -4,6 +4,7 @@ import DefaulLayout from "./pages/layouts/DefaultLayout";
 import HomePage from "./pages/HomePage";
 import MovieList from "./pages/movies/MovieList";
 import MovieDetail from "./pages/movies/MovieDetail";
+import AddNewMovie from "./pages/movies/AddNewMovie";
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
           <Route path="movies">
             <Route index Component={MovieList} />
             <Route path=":id" Component={MovieDetail} />
+            <Route path="add-new" Component={AddNewMovie} />
           </Route>
         </Route>
       </Routes>
