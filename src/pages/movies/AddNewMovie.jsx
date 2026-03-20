@@ -46,8 +46,6 @@ export default function AddNewBook() {
       .post(`http://localhost:3000/movies`, formData, headerConfig)
       .then((res) => {
         const insertId = res.data.id;
-        console.log(res.data.id);
-
         navigate(`/movies/${insertId}`);
       });
   };
