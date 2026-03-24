@@ -16,16 +16,24 @@ export default function MovieDetail() {
 
   function fetchMovie() {
     activateLoading();
-    axios.get(`http://localhost:3000/movies/${id}`).then((res) => {
-      const movie = res.data.result;
-      let voteSum = 0;
-      movie.reviews.forEach((review) => {
-        voteSum += review.vote;
+    axios
+      .get(`http://localhost:3000/movies/${id}`)
+      .then((res) => {
+        const movie = res.data.result;
+        let voteSum = 0;
+        movie.reviews.forEach((review) => {
+          voteSum += review.vote;
+        });
+        movie.average_vote = Math.floor(voteSum / movie.reviews.length);
+        setMovie(movie);
+      })
+      .finally(() => {
+        deactivateLoading();
+      })
+      .catch((err) => {
+        showAlert(err, "danger");
+        deactivateLoading();
       });
-      movie.average_vote = Math.floor(voteSum / movie.reviews.length);
-      setMovie(movie);
-      deactivateLoading();
-    });
   }
 
   if (!movie) return <></>;

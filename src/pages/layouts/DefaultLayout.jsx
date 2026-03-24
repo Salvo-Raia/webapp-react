@@ -1,12 +1,14 @@
 // Imports
 import { NavLink, Outlet } from "react-router-dom";
 import { useLoaderContext } from "../../../context/LoaderContext";
+import { useAlertContext } from "../../../context/AlertContext";
 
 export default function DefaulLayout() {
   const { isLoading } = useLoaderContext();
+  const { alert, hideAlert } = useAlertContext();
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary py-3">
         <div className="container">
           <NavLink to="/" className="navbar-brand">
             Site Logo
@@ -46,6 +48,23 @@ export default function DefaulLayout() {
         )}
 
         <div className="container">
+          {alert.visibility && (
+            <div>
+              <div
+                className={`alert alert-${alert.type} mb-4 alert-dismissibale fade show mb-4 d-flex justify-content-between align-items-center`}
+                role="alert"
+              >
+                {alert.message}
+                <button
+                  type="button"
+                  className="btn-close"
+                  data-bs-dismiss="alert"
+                  aria-label="Close"
+                  onClick={hideAlert}
+                />
+              </div>
+            </div>
+          )}
           <Outlet />
         </div>
       </main>

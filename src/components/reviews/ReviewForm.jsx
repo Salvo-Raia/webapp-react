@@ -1,6 +1,7 @@
 // Imports
-import { useLoaderContext } from "../../../context/LoaderContext";
 import { useState } from "react";
+import { useLoaderContext } from "../../../context/LoaderContext";
+import { useAlertContext } from "../../../context/AlertContext";
 import axios from "axios";
 
 const formInitialData = {
@@ -11,7 +12,8 @@ const formInitialData = {
 
 export default function ReviewForm({ movieId, afterFormSubmit }) {
   const [formData, setFormData] = useState(formInitialData);
-  const { activateLoading } = useLoaderContext;
+  const { activateLoading, deactivateLoading } = useLoaderContext();
+  const { showAlert } = useAlertContext();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -23,6 +25,13 @@ export default function ReviewForm({ movieId, afterFormSubmit }) {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    if (!validateForm()) {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+      return showAlert("Invalid input fields", "warning");
+    }
     storeMovieReview();
     console.log("Review form for movie: " + movieId + " sent");
     console.log(formData);
@@ -30,13 +39,31 @@ export default function ReviewForm({ movieId, afterFormSubmit }) {
   };
 
   const storeMovieReview = () => {
-    axios;
-    activateLoading()
+    activateLoading();
+    axios
       .post(`http://localhost:3000/movies/${movieId}/review`, formData)
       .then((res) => {
-        console.log(res.data);
+        showAlert("Review successfully added", "success");
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
         afterFormSubmit();
+      })
+      .catch((err) => {
+        showAlert(err, "danger");
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+        deactivateLoading();
       });
+  };
+
+  const validateForm = () => {
+    if (!formData.name) return false;
+    if (formData.vote > 5 || formData.vote < 1) return false;
+    if (!formData.text) return false;
   };
 
   return (
@@ -57,7 +84,6 @@ export default function ReviewForm({ movieId, afterFormSubmit }) {
               onChange={handleInputChange}
               type="text"
               id="name"
-              required
             />
           </div>
 
@@ -69,7 +95,6 @@ export default function ReviewForm({ movieId, afterFormSubmit }) {
               className="form-control"
               onChange={handleInputChange}
               id="text"
-              required
             />
           </div>
 
@@ -78,13 +103,10 @@ export default function ReviewForm({ movieId, afterFormSubmit }) {
             <input
               name="vote"
               value={formData.vote}
-              min="1"
-              max="5"
               className="form-control"
               onChange={handleInputChange}
               type="number"
               id="vote"
-              required
             />
           </div>
           <button className="btn btn-primary my-2">Send review</button>

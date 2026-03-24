@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLoaderContext } from "../../../context/LoaderContext";
+import { useAlertContext } from "../../../context/AlertContext";
 
 const initialFormDatA = {
   title: "",
@@ -17,6 +18,7 @@ export default function AddNewBook() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState(initialFormDatA);
   const { activateLoading, deactivateLoading } = useLoaderContext();
+  const { showAlert } = useAlertContext;
 
   const handleInputChange = (e) => {
     const { name, value, type } = e.target;
@@ -37,6 +39,13 @@ export default function AddNewBook() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+    if (!validateForm()) {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+      return showAlert("Invalid input fields", "warning");
+    }
     storeMovie();
   };
 
@@ -50,8 +59,26 @@ export default function AddNewBook() {
       .post(`http://localhost:3000/movies`, formData, headerConfig)
       .then((res) => {
         const insertId = res.data.id;
+        showAlert("Movie successfully added!", "success");
         navigate(`/movies/${insertId}`);
+      })
+      .catch((err) => {
+        showAlert(err, "danger");
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+        deactivateLoading();
       });
+  };
+
+  const validateForm = () => {
+    if (!formData.title) return false;
+    if (formData.director) return false;
+    if (!formData.genre) return false;
+    if (!formData.release_year) return false;
+    if (!abstract) return false;
+    if (!image) return false;
   };
 
   return (
@@ -100,7 +127,6 @@ export default function AddNewBook() {
               onChange={handleInputChange}
               type="text"
               id="genre"
-              required
             />
           </div>
 
@@ -115,7 +141,6 @@ export default function AddNewBook() {
               onChange={handleInputChange}
               type="number"
               id="release_year"
-              required
             />
           </div>
 
@@ -140,7 +165,6 @@ export default function AddNewBook() {
             onChange={handleInputChange}
             type="file"
             id="image"
-            required
           />
         </div>
         <button className="btn btn-primary my-2">Add movie</button>

@@ -12,10 +12,18 @@ export default function MovieList() {
 
   function fetchMovies() {
     activateLoading();
-    axios.get("http://localhost:3000/movies").then((res) => {
-      setMovies(res.data.result);
-      deactivateLoading();
-    });
+    axios
+      .get("http://localhost:3000/movies")
+      .then((res) => {
+        setMovies(res.data.result);
+      })
+      .catch((err) => {
+        showAlert(err, "danger");
+        deactivateLoading();
+      })
+      .finally(() => {
+        deactivateLoading();
+      });
   }
 
   return (
