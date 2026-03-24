@@ -2,15 +2,19 @@
 import axios from "axios";
 import { NavLink } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useLoaderContext } from "../../../context/LoaderContext";
 import MovieListComponent from "../../components/MovieListComponent";
 
 export default function MovieList() {
   const [movies, setMovies] = useState([]);
+  const { activateLoading, deactivateLoading } = useLoaderContext();
   useEffect(fetchMovies, []);
 
   function fetchMovies() {
+    activateLoading();
     axios.get("http://localhost:3000/movies").then((res) => {
       setMovies(res.data.result);
+      deactivateLoading();
     });
   }
 

@@ -1,5 +1,8 @@
+// Imports
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useLoaderContext } from "../../../context/LoaderContext";
+
 import axios from "axios";
 import Rating from "../../components/rating";
 import ReviewCard from "../../components/reviews/ReviewCard";
@@ -8,9 +11,11 @@ import ReviewForm from "../../components/reviews/ReviewForm";
 export default function MovieDetail() {
   const { id } = useParams();
   const [movie, setMovie] = useState();
+  const { activateLoading, deactivateLoading } = useLoaderContext();
   useEffect(fetchMovie, []);
 
   function fetchMovie() {
+    activateLoading();
     axios.get(`http://localhost:3000/movies/${id}`).then((res) => {
       const movie = res.data.result;
       let voteSum = 0;
@@ -19,10 +24,11 @@ export default function MovieDetail() {
       });
       movie.average_vote = Math.floor(voteSum / movie.reviews.length);
       setMovie(movie);
+      deactivateLoading();
     });
   }
 
-  if (!movie) return <h1>Loading...</h1>;
+  if (!movie) return <></>;
 
   return (
     <>

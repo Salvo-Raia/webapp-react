@@ -1,6 +1,8 @@
+// Imports
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useLoaderContext } from "../../../context/LoaderContext";
 
 const initialFormDatA = {
   title: "",
@@ -14,6 +16,7 @@ const initialFormDatA = {
 export default function AddNewBook() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState(initialFormDatA);
+  const { activateLoading, deactivateLoading } = useLoaderContext();
 
   const handleInputChange = (e) => {
     const { name, value, type } = e.target;
@@ -42,7 +45,8 @@ export default function AddNewBook() {
       headers: { "Content-Type": "multipart/form-data" },
     };
 
-    axios
+    axios;
+    activateLoading()
       .post(`http://localhost:3000/movies`, formData, headerConfig)
       .then((res) => {
         const insertId = res.data.id;

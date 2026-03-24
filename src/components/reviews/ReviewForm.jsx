@@ -1,4 +1,5 @@
 // Imports
+import { useLoaderContext } from "../../../context/LoaderContext";
 import { useState } from "react";
 import axios from "axios";
 
@@ -10,6 +11,7 @@ const formInitialData = {
 
 export default function ReviewForm({ movieId, afterFormSubmit }) {
   const [formData, setFormData] = useState(formInitialData);
+  const { activateLoading } = useLoaderContext;
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -28,7 +30,8 @@ export default function ReviewForm({ movieId, afterFormSubmit }) {
   };
 
   const storeMovieReview = () => {
-    axios
+    axios;
+    activateLoading()
       .post(`http://localhost:3000/movies/${movieId}/review`, formData)
       .then((res) => {
         console.log(res.data);

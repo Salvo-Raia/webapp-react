@@ -1,7 +1,9 @@
 // Imports
 import { NavLink, Outlet } from "react-router-dom";
+import { useLoaderContext } from "../../../context/LoaderContext";
 
 export default function DefaulLayout() {
+  const { isLoading } = useLoaderContext();
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -37,6 +39,12 @@ export default function DefaulLayout() {
         </div>
       </nav>
       <main className="pb-5">
+        {isLoading && (
+          <div className="overlay-loading text-center text-light">
+            <h1>Loading...</h1>
+          </div>
+        )}
+
         <div className="container">
           <Outlet />
         </div>

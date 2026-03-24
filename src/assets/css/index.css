@@ -37,3 +37,12 @@ aspect-ratio: 21/9;
     overflow: hidden;
     text-wrap: nowrap;
 }
+
+/* Laoder */ 
+.overlay-loading {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    background-color: rgba(128, 128, 128, 0.521);
+    backdrop-filter: blur(2px);
+}
