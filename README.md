@@ -1,57 +1,128 @@
-# Esercizio: Setup Web App React
 
-Nome repo: `webapp-react`
+![Boolean Tech Academy](https://img.shields.io/badge/Boolean_Tech_Academy-001632?style=for-the-badge)
 
-ma lavoreremo anche su `webapp-express` (la stessa di ieri)
+# 🎓 Exercise 50/50 - React Web App
 
-## Consegna 1
+Complete a movie web application by integrating a React frontend with an Express backend, implementing review submission and introducing a global loading system.
 
-Ora è il momento di prepararci al frontend della nostra Web App!
+## 📌 Project Overview
 
-### MILESTONE 0
+| Property | Details |
+|:--|:--|
+| Repository | `webapp-react` |
+| Backend Repository | `webapp-express` |
+| Category | Boolean Tech Academy |
+| Type | Exercise |
+| Exercise | 50/50 |
 
-- Ragionare e preparare uno schemino per ompostare la struttura del lavoro in maniera da sfruttare la riutailizzabilità dei componenti React e le loro props.
+## 🎯 Assignment
 
-### MILESTONE 1
+Complete the movie web application through three consecutive development stages, connecting the React frontend to the existing Express backend and improving the overall user experience.
 
-- Mettiamo su un nuovo progetto React aiutandoci con Vite
-- Ripuliamo come sempre l’app da file e codice di esempio non necessari
-- Installiamo il necessario: React Router, Axios e Bootstrap (se volete utilizzarlo)
+### Deliverable 1 - React Frontend Setup
 
-### MILESTONE 2
+Prepare the frontend of the web application.
 
-- Creiamo un layout di base per la nostra applicazione ed impostiamo le rotte per le diverse pagine.
-- Creiamo 2 pagine:
-- La home, in cui mostreremo la lista dei film
-- La pagina di dettaglio di un singolo film
+#### Milestone 0 - Component Planning
 
-### MILESTONE 3
+- Plan the application structure before starting development.
+- Create a preliminary diagram to organize the components.
+- Identify opportunities to reuse React components through props.
 
-- Configuriamo l’app di backend (repo `webapp-express`) a ricevere chiamate dalla nostra applicazione React, installando e impostando il middleware CORS
-- Proviamo quindi ad effettuare una chiamata Ajax dalla home del progetto React, per ottenere la lista dei libri
+#### Milestone 1 - React Project Setup
 
-### MILESTONE 4
+- Create a new React project using Vite.
+- Remove unnecessary example files and code.
+- Install the required dependencies:
+  - React Router
+  - Axios
+  - Bootstrap (optional)
 
-- In ultimo, effettuiamo una chiamata AJAX dalla pagina di dettaglio per ottenere il dettaglio di un singolo film, comprese le sue recensioni
+#### Milestone 2 - Layout and Routing
 
-**Bonus**
-Curare l’aspetto estetico della vostra applicazione
+- Create the basic application layout.
+- Configure the routes for the different pages.
+- Implement two pages:
+  - **Home:** Display the list of movies.
+  - **Movie Detail:** Display the details of a single movie.
 
-## Consegna 2
+#### Milestone 3 - Backend Integration
 
-Miglioriamo l’esperienza dell’utente inserendo
+Configure the Express backend (`webapp-express`) to accept requests from the React application.
 
-### MILESTONE 1 (BACKEND)
+- Install and configure the **CORS** middleware.
+- Make an AJAX request from the React home page.
+- Retrieve and display the list of movies from the backend.
 
-Predisponiamo un’API per salvare nel database una nuova recensione legata ad un film
-Testiamola su postman e verifichiamo che nel DB venga effettivamente inserita una nuova recensione
+#### Milestone 4 - Movie Details and Reviews
 
-### MILESTONE 2 (FRONTEND)
+- Make an AJAX request from the movie detail page.
+- Retrieve the details of a single movie.
+- Retrieve and display its associated reviews.
 
-Creiamo un componente che contenga il form per le recensioni
-Inseriamo questo componente nella pagina di dettaglio del film
-All’invio del form, la nuova recensione viene salvata sul database e visualizzata nella pagina, in fondo alle altre
+#### Bonus - Application Styling
 
-**BONUS:**
+Improve the visual appearance of the application.
 
-Inseriamo una validazione nel form di recensione
+### Deliverable 2 - Movie Review Submission
+
+Improve the user experience by allowing users to submit new reviews for movies.
+
+#### Milestone 1 - Backend: Save Reviews
+
+- Create an API endpoint to save a new review in the database, associating it with the corresponding movie.
+- Test the endpoint using Postman.
+- Verify in the database that the new review has been successfully inserted.
+
+#### Milestone 2 - Frontend: Review Form
+
+- Create a component containing the review form.
+- Integrate the component into the movie detail page.
+- When the form is submitted, send the new review to the backend.
+- Save the review in the database.
+- Display the newly submitted review at the bottom of the existing reviews.
+
+#### Bonus - Form Validation
+
+Implement validation in the review form to ensure that submitted data meets the required criteria.
+
+### Deliverable 3 - Global Loader
+
+Improve the user experience of the SPA by introducing a reusable loading component.
+
+- Create a dedicated **Loader** component.
+- Make the component available across all pages of the application.
+- Create and use a React Context to manage the loader's state.
+- Allow any component to activate or deactivate the loader on its own page.
+
+#### Bonus - Custom Styling
+
+Customize the application's appearance using CSS.
+
+## 🛠️ Technologies
+
+![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
+
+## 💡 What I Learned
+
+- Planning React application architecture.
+- Designing reusable components and managing props.
+- Setting up a React project with Vite.
+- Configuring client-side routing with React Router.
+- Making AJAX requests using Axios.
+- Connecting a React frontend to an Express backend.
+- Configuring cross-origin resource sharing with CORS.
+- Retrieving and displaying data from an API.
+- Managing movie details and related reviews.
+- Creating API endpoints to insert database records.
+- Building reusable React form components.
+- Handling form submissions and asynchronous requests.
+- Implementing client-side form validation.
+- Updating the interface dynamically after submitting data.
+- Managing global state with React Context.
+- Sharing loading state across multiple components and pages.
+- Building reusable UI components and improving the user experience through loading indicators and custom styling.
+
+## ©️ Credits
+
+Exercise assigned by **Boolean Tech Academy** as part of the Web Development course - Class 152 - Year 2025-2026
