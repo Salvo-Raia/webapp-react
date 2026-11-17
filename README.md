@@ -1,7 +1,6 @@
+![Static Badge](https://img.shields.io/badge/Boolean_Tech_Academy-1565C0?style=for-the-badge)
 
-![Boolean Tech Academy](https://img.shields.io/badge/Boolean_Tech_Academy-001632?style=for-the-badge)
-
-# 🎓 Exercise 50/50 - React Web App
+# 🎓 Exercise 50/50: React Web App
 
 Complete a movie web application by integrating a React frontend with an Express backend, implementing review submission and introducing a global loading system.
 
@@ -19,17 +18,15 @@ Complete a movie web application by integrating a React frontend with an Express
 
 Complete the movie web application through three consecutive development stages, connecting the React frontend to the existing Express backend and improving the overall user experience.
 
-### Deliverable 1 - React Frontend Setup
+### Part 1 - Prepare the frontend of the web application.
 
-Prepare the frontend of the web application.
-
-#### Milestone 0 - Component Planning
+#### Milestone 1 - Component Planning
 
 - Plan the application structure before starting development.
 - Create a preliminary diagram to organize the components.
 - Identify opportunities to reuse React components through props.
 
-#### Milestone 1 - React Project Setup
+#### Milestone 2 - React Project Setup
 
 - Create a new React project using Vite.
 - Remove unnecessary example files and code.
@@ -38,7 +35,7 @@ Prepare the frontend of the web application.
   - Axios
   - Bootstrap (optional)
 
-#### Milestone 2 - Layout and Routing
+#### Milestone 3 - Layout and Routing
 
 - Create the basic application layout.
 - Configure the routes for the different pages.
@@ -46,7 +43,7 @@ Prepare the frontend of the web application.
   - **Home:** Display the list of movies.
   - **Movie Detail:** Display the details of a single movie.
 
-#### Milestone 3 - Backend Integration
+#### Milestone 4 - Backend Integration
 
 Configure the Express backend (`webapp-express`) to accept requests from the React application.
 
@@ -54,7 +51,7 @@ Configure the Express backend (`webapp-express`) to accept requests from the Rea
 - Make an AJAX request from the React home page.
 - Retrieve and display the list of movies from the backend.
 
-#### Milestone 4 - Movie Details and Reviews
+#### Milestone 5 - Movie Details and Reviews
 
 - Make an AJAX request from the movie detail page.
 - Retrieve the details of a single movie.
@@ -64,7 +61,7 @@ Configure the Express backend (`webapp-express`) to accept requests from the Rea
 
 Improve the visual appearance of the application.
 
-### Deliverable 2 - Movie Review Submission
+### Part 2 - Movie Review Submission
 
 Improve the user experience by allowing users to submit new reviews for movies.
 
@@ -82,11 +79,11 @@ Improve the user experience by allowing users to submit new reviews for movies.
 - Save the review in the database.
 - Display the newly submitted review at the bottom of the existing reviews.
 
-#### Bonus - Form Validation
+### ⭐ Bonus
 
 Implement validation in the review form to ensure that submitted data meets the required criteria.
 
-### Deliverable 3 - Global Loader
+### Part 3 - Global Loader
 
 Improve the user experience of the SPA by introducing a reusable loading component.
 
@@ -95,13 +92,13 @@ Improve the user experience of the SPA by introducing a reusable loading compone
 - Create and use a React Context to manage the loader's state.
 - Allow any component to activate or deactivate the loader on its own page.
 
-#### Bonus - Custom Styling
+### ⭐ Bonus
 
 Customize the application's appearance using CSS.
 
 ## 🛠️ Technologies
 
-![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
+![JSX](https://img.shields.io/badge/JSX-6A1B9A?style=flat-square&logo=react&logoColor=F7DF1E&labelColor=6A1B9A&color=6A1B9A) ![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
 
 ## 💡 What I Learned
 
@@ -125,4 +122,4 @@ Customize the application's appearance using CSS.
 
 ## ©️ Credits
 
-Exercise assigned by **Boolean Tech Academy** as part of the Web Development course - Class 152 - Year 2025-2026
+Exercise assigned by **Boolean Tech Academy** as part of the Web Development course (Class 152, A.Y. 2025–2026).
