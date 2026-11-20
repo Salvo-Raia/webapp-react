@@ -1,32 +1,28 @@
 ![Static Badge](https://img.shields.io/badge/Boolean_Tech_Academy-1565C0?style=for-the-badge)
 
-# 🎓 Exercise 50/50: React Web App
+# Exercise 50/50: React Web App
 
 Complete a movie web application by integrating a React frontend with an Express backend, implementing review submission and introducing a global loading system.
 
-## 📌 Project Overview
+## Project overview
 
-| Property | Details |
-|:--|:--|
-| Repository | `webapp-react` |
-| Backend Repository | `webapp-express` |
-| Category | Boolean Tech Academy |
-| Type | Exercise |
-| Exercise | 50/50 |
+| Repository | Project | Category | Main Focus | Exercise |
+|:--|:--|:--|:--|:--|
+| webapp-react | React Web App | Exercise | React, Express integration, API & Global state management | 50/50 |
 
-## 🎯 Assignment
+## Assignment
 
 Complete the movie web application through three consecutive development stages, connecting the React frontend to the existing Express backend and improving the overall user experience.
 
 ### Part 1 - Prepare the frontend of the web application.
 
-#### Milestone 1 - Component Planning
+#### Milestone 1: Component Planning
 
 - Plan the application structure before starting development.
 - Create a preliminary diagram to organize the components.
 - Identify opportunities to reuse React components through props.
 
-#### Milestone 2 - React Project Setup
+#### Milestone 2: React Project Setup
 
 - Create a new React project using Vite.
 - Remove unnecessary example files and code.
@@ -35,7 +31,7 @@ Complete the movie web application through three consecutive development stages,
   - Axios
   - Bootstrap (optional)
 
-#### Milestone 3 - Layout and Routing
+#### Milestone 3: Layout and Routing
 
 - Create the basic application layout.
 - Configure the routes for the different pages.
@@ -43,7 +39,7 @@ Complete the movie web application through three consecutive development stages,
   - **Home:** Display the list of movies.
   - **Movie Detail:** Display the details of a single movie.
 
-#### Milestone 4 - Backend Integration
+#### Milestone 4: Backend Integration
 
 Configure the Express backend (`webapp-express`) to accept requests from the React application.
 
@@ -51,13 +47,13 @@ Configure the Express backend (`webapp-express`) to accept requests from the Rea
 - Make an AJAX request from the React home page.
 - Retrieve and display the list of movies from the backend.
 
-#### Milestone 5 - Movie Details and Reviews
+#### Milestone 5: Movie Details and Reviews
 
 - Make an AJAX request from the movie detail page.
 - Retrieve the details of a single movie.
 - Retrieve and display its associated reviews.
 
-#### Bonus - Application Styling
+#### Bonus challenge
 
 Improve the visual appearance of the application.
 
@@ -65,13 +61,13 @@ Improve the visual appearance of the application.
 
 Improve the user experience by allowing users to submit new reviews for movies.
 
-#### Milestone 1 - Backend: Save Reviews
+#### Milestone 6: Backend - Save Reviews
 
 - Create an API endpoint to save a new review in the database, associating it with the corresponding movie.
 - Test the endpoint using Postman.
 - Verify in the database that the new review has been successfully inserted.
 
-#### Milestone 2 - Frontend: Review Form
+#### Milestone 7: Frontend - Review Form
 
 - Create a component containing the review form.
 - Integrate the component into the movie detail page.
@@ -79,7 +75,7 @@ Improve the user experience by allowing users to submit new reviews for movies.
 - Save the review in the database.
 - Display the newly submitted review at the bottom of the existing reviews.
 
-### ⭐ Bonus
+#### Bonus challenge
 
 Implement validation in the review form to ensure that submitted data meets the required criteria.
 
@@ -92,15 +88,19 @@ Improve the user experience of the SPA by introducing a reusable loading compone
 - Create and use a React Context to manage the loader's state.
 - Allow any component to activate or deactivate the loader on its own page.
 
-### ⭐ Bonus
+#### Bonus challenge
 
 Customize the application's appearance using CSS.
 
-## 🛠️ Technologies
+## Technologies
 
-![JSX](https://img.shields.io/badge/JSX-6A1B9A?style=flat-square&logo=react&logoColor=F7DF1E&labelColor=6A1B9A&color=6A1B9A) ![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
+![JSX](https://img.shields.io/badge/JSX-6A1B9A?style=flat-square&logo=react&logoColor=F7DF1E&labelColor=6A1B9A&color=6A1B9A) 
+![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css&logoColor=white) 
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) 
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) 
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
 
-## 💡 What I Learned
+## What I learned
 
 - Planning React application architecture.
 - Designing reusable components and managing props.
@@ -120,6 +120,6 @@ Customize the application's appearance using CSS.
 - Sharing loading state across multiple components and pages.
 - Building reusable UI components and improving the user experience through loading indicators and custom styling.
 
-## ©️ Credits
+## Credits
 
-Exercise assigned by **Boolean Tech Academy** as part of the Web Development course (Class 152, A.Y. 2025–2026).
+Exercise assigned by **Boolean Tech Academy** as part of the Web Development course (Class 152, A.Y. 2025-2026).
