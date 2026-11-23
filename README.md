@@ -36,8 +36,8 @@ Complete the movie web application through three consecutive development stages,
 - Create the basic application layout.
 - Configure the routes for the different pages.
 - Implement two pages:
-  - **Home:** Display the list of movies.
-  - **Movie Detail:** Display the details of a single movie.
+  - **Home** - Display the list of movies.
+  - **Movie Detail** - Display the details of a single movie.
 
 #### Milestone 4: Backend integration
 
