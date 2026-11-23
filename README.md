@@ -8,7 +8,7 @@ Complete a movie web application by integrating a React frontend with an Express
 
 | Repository | Project | Category | Main Focus | Exercise |
 |:--|:--|:--|:--|:--|
-| webapp-react | React Web App | Exercise | React, express, API & Global state management | 50/50 |
+| webapp-react | React Web App | Exercise | React, Express, API, global state management | 50/50 |
 
 ## Assignment
 
@@ -86,7 +86,7 @@ Improve the user experience of the SPA by introducing a reusable loading compone
 - Create a dedicated **Loader** component.
 - Make the component available across all pages of the application.
 - Create and use a React Context to manage the loader's state.
-- Allow any component to activate or deactivate the loader on its own page.
+- Allow any component to activate or deactivate the loader when needed.
 
 #### Bonus challenge
 
@@ -94,10 +94,10 @@ Customize the application's appearance using CSS.
 
 ## Technologies
 
-![JSX](https://img.shields.io/badge/JSX-6A1B9A?style=flat-square&logo=react&logoColor=F7DF1E&labelColor=6A1B9A&color=6A1B9A) 
-![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css&logoColor=white) 
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) 
-![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) 
+![JSX](https://img.shields.io/badge/JSX-6A1B9A?style=flat-square&logo=react&logoColor=F7DF1E&labelColor=6A1B9A&color=6A1B9A)
+![CSS](https://img.shields.io/badge/CSS-1572B6?style=flat-square&logo=css&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
 ![Vite](https://img.shields.io/badge/Vite-646CFF?style=flat-square&logo=vite&logoColor=white)
 
 ## What I learned
