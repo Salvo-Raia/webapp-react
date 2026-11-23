@@ -8,21 +8,21 @@ Complete a movie web application by integrating a React frontend with an Express
 
 | Repository | Project | Category | Main Focus | Exercise |
 |:--|:--|:--|:--|:--|
-| webapp-react | React Web App | Exercise | React, Express integration, API & Global state management | 50/50 |
+| webapp-react | React Web App | Exercise | React, express, API & Global state management | 50/50 |
 
 ## Assignment
 
 Complete the movie web application through three consecutive development stages, connecting the React frontend to the existing Express backend and improving the overall user experience.
 
-### Part 1 - Prepare the frontend of the web application.
+### Part 1 - Prepare the frontend of the web application
 
-#### Milestone 1: Component Planning
+#### Milestone 1: Component planning
 
 - Plan the application structure before starting development.
 - Create a preliminary diagram to organize the components.
 - Identify opportunities to reuse React components through props.
 
-#### Milestone 2: React Project Setup
+#### Milestone 2: React project setup
 
 - Create a new React project using Vite.
 - Remove unnecessary example files and code.
@@ -31,7 +31,7 @@ Complete the movie web application through three consecutive development stages,
   - Axios
   - Bootstrap (optional)
 
-#### Milestone 3: Layout and Routing
+#### Milestone 3: Layout and routing
 
 - Create the basic application layout.
 - Configure the routes for the different pages.
@@ -39,7 +39,7 @@ Complete the movie web application through three consecutive development stages,
   - **Home:** Display the list of movies.
   - **Movie Detail:** Display the details of a single movie.
 
-#### Milestone 4: Backend Integration
+#### Milestone 4: Backend integration
 
 Configure the Express backend (`webapp-express`) to accept requests from the React application.
 
@@ -47,7 +47,7 @@ Configure the Express backend (`webapp-express`) to accept requests from the Rea
 - Make an AJAX request from the React home page.
 - Retrieve and display the list of movies from the backend.
 
-#### Milestone 5: Movie Details and Reviews
+#### Milestone 5: Movie details and reviews
 
 - Make an AJAX request from the movie detail page.
 - Retrieve the details of a single movie.
@@ -57,17 +57,17 @@ Configure the Express backend (`webapp-express`) to accept requests from the Rea
 
 Improve the visual appearance of the application.
 
-### Part 2 - Movie Review Submission
+### Part 2 - Movie review submission
 
 Improve the user experience by allowing users to submit new reviews for movies.
 
-#### Milestone 6: Backend - Save Reviews
+#### Milestone 6: Backend - Save reviews
 
 - Create an API endpoint to save a new review in the database, associating it with the corresponding movie.
 - Test the endpoint using Postman.
 - Verify in the database that the new review has been successfully inserted.
 
-#### Milestone 7: Frontend - Review Form
+#### Milestone 7: Frontend - review form
 
 - Create a component containing the review form.
 - Integrate the component into the movie detail page.
@@ -79,7 +79,7 @@ Improve the user experience by allowing users to submit new reviews for movies.
 
 Implement validation in the review form to ensure that submitted data meets the required criteria.
 
-### Part 3 - Global Loader
+### Part 3 - Global loader
 
 Improve the user experience of the SPA by introducing a reusable loading component.
 
