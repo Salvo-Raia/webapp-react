@@ -18,11 +18,15 @@ Complete the movie web application through three consecutive development stages,
 
 #### Milestone 1: Component planning
 
+Define the initial application structure and identify the components that can be reused.
+
 - Plan the application structure before starting development.
 - Create a preliminary diagram to organize the components.
 - Identify opportunities to reuse React components through props.
 
 #### Milestone 2: React project setup
+
+Set up the React project and install the dependencies required by the application.
 
 - Create a new React project using Vite.
 - Remove unnecessary example files and code.
@@ -32,6 +36,8 @@ Complete the movie web application through three consecutive development stages,
   - Bootstrap (optional)
 
 #### Milestone 3: Layout and routing
+
+Build the main application layout and configure navigation between its pages.
 
 - Create the basic application layout.
 - Configure the routes for the different pages.
@@ -49,6 +55,8 @@ Configure the Express backend (`webapp-express`) to accept requests from the Rea
 
 #### Milestone 5: Movie details and reviews
 
+Retrieve the information required to display each movie and its associated reviews.
+
 - Make an AJAX request from the movie detail page.
 - Retrieve the details of a single movie.
 - Retrieve and display its associated reviews.
@@ -63,11 +71,15 @@ Improve the user experience by allowing users to submit new reviews for movies.
 
 #### Milestone 6: Backend - Save reviews
 
+Create the backend functionality required to receive and store new movie reviews.
+
 - Create an API endpoint to save a new review in the database, associating it with the corresponding movie.
 - Test the endpoint using Postman.
 - Verify in the database that the new review has been successfully inserted.
 
 #### Milestone 7: Frontend - review form
+
+Build the form that allows users to submit new reviews and display them in the movie detail page.
 
 - Create a component containing the review form.
 - Integrate the component into the movie detail page.
