@@ -16,6 +16,8 @@ Complete the movie web application through three consecutive development stages,
 
 ### Part 1 - Prepare the frontend of the web application
 
+Prepare the React frontend by setting up the project, organizing reusable components, and building the main pages.
+
 #### Milestone 1: Component planning
 
 Define the initial application structure and identify the components that can be reused.
@@ -92,6 +94,8 @@ Build the form that allows users to submit new reviews and display them in the m
 Implement validation in the review form to ensure that submitted data meets the required criteria.
 
 ### Part 3 - Global loader
+
+Introduce a shared loading system to provide consistent feedback while asynchronous operations are in progress.
 
 #### Milestone 8: Implement the global loader
 
