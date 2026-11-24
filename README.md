@@ -81,6 +81,8 @@ Implement validation in the review form to ensure that submitted data meets the 
 
 ### Part 3 - Global loader
 
+#### Milestone 8: Implement the global loader
+
 Improve the user experience of the SPA by introducing a reusable loading component.
 
 - Create a dedicated **Loader** component.
